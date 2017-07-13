@@ -1,0 +1,92 @@
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  padding: 0 32px; }
+  header nav#menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background: transparent;
+    transition: all 0.3s ease; }
+    header nav#menu div.menu-items {
+      padding: 0 16px;
+      min-width: 70px;
+      text-align: center;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #fff;
+      border-bottom: 2px solid transparent; }
+      header nav#menu div.menu-items p {
+        margin: 16px 0; }
+      header nav#menu div.menu-items:hover {
+        border-bottom-color: #fff;
+        cursor: pointer; }
+    header nav#menu.center-shadow {
+      margin: 0 -32px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      box-shadow: 0 0 2px 0 #b1b1b1;
+      background: #fff; }
+      header nav#menu.center-shadow div.menu-items {
+        color: #007aff; }
+        header nav#menu.center-shadow div.menu-items:hover {
+          border-bottom-color: #007aff; }
+
+section {
+  margin-bottom: 16px; }
+  section#introBanner {
+    height: 300px;
+    overflow: hidden;
+    position: relative; }
+    section#introBanner .background {
+      width: 100%;
+      min-height: 190px;
+      background: url("../images/banner-back.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; }
+    section#introBanner .content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 72px 32px 32px; }
+      section#introBanner .content .avatar {
+        margin-right: 32px; }
+        section#introBanner .content .avatar img {
+          height: 220px;
+          border-radius: 2px;
+          box-shadow: 0 0 4px 0 #b1b1b1; }
+      section#introBanner .content .info {
+        position: relative;
+        top: 32px; }
+        section#introBanner .content .info .name {
+          font-size: 72px;
+          color: #fff; }
+        section#introBanner .content .info .profession {
+          font-size: 32px;
+          margin-top: 8px; }
+        section#introBanner .content .info .location {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          font-size: 16px;
+          color: rgba(0, 0, 0, 0.6); }
+          section#introBanner .content .info .location i {
+            font-size: 16px; }
