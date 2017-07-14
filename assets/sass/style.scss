@@ -1,3 +1,6 @@
+.hidden{
+  display: none !important;
+}
 header{
   width: 100%;
   position: fixed;
@@ -92,7 +95,7 @@ section {
       }
     }
   }
-  &#projects{
+  &#projects {
     //background: #0F6C7D;
     background: url("../images/project-back.jpeg");
     background-repeat: no-repeat;
@@ -100,10 +103,11 @@ section {
     background-position: center center;
     color: #fff;
     padding: 32px;
-    .title{
+    .title {
       font-size: 72px;
       text-align: right;
-      &:before{
+      margin-bottom: 32px;
+      &:before {
         content: "";
         height: 40px;
         width: 1px;
@@ -112,34 +116,86 @@ section {
         margin-right: 16px;
       }
     }
-    .project-list{
+    .project-list {
       display: flex;
       justify-content: space-between;
       flex: 1 0 50%;
-      .project-name{
+      margin: 64px 0;
+      .project-name {
         padding: 0 24px;
-        border-left: 4px solid rgba(255,255,255,0.4);
-        .project{
+        border-left: 4px solid rgba(255, 255, 255, 0.4);
+        min-width: 25%;
+        .project {
           font-size: 24px;
           //color: rgba(255,255,255,0.4);
           color: lighten(#236471, 30);
           margin: 32px 0;
           position: relative;
           transition: all 0.3s ease;
-          &:before{
-            content:"";
+          &:before {
+            content: "";
             position: absolute;
             top: 8px;
             left: -32px;
             height: 10px;
             width: 10px;
-            border:1px solid lighten(#236471, 40);
+            border: 1px solid lighten(#236471, 40);
             transition: all 0.3s ease;
           }
-          &.is-active, &:hover{
+          &.is-active, &:hover {
             color: #236471;
-            &:before{
+            &:before {
               background: #236471;
+            }
+          }
+        }
+      }
+      .project-info{
+        max-width: 75%;
+        .project-pop{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .pictures{
+            position: relative;
+            width: 100%;
+            img{
+              position: absolute;
+              top: 0;
+              left: 0;
+              border:1px solid white;
+              transition: all 0.3s ease;
+              transform: translate(0,0);
+              &.first{
+                z-index: 3;
+              }
+              &.second{
+                z-index:2;
+              }
+              &.third{
+                z-index: 1;
+              }
+            }
+            &.is-active{
+              img{
+                &.first.is-animating{
+                  transform: translateX(62px);
+                }
+                &.second.is-animating{
+                  transform: translateX(38px) translateY(16px);
+                }
+                &.third.is-animating{
+                  transform: translateX(18px) translateY(32px);
+                }
+              }
+            }
+          }
+          .content{
+            max-width: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            &.is-active{
+              opacity: 1;
             }
           }
         }
