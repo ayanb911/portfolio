@@ -184,9 +184,44 @@ section {
             section#projects .project-list .project-info .project-pop .pictures.is-active img.third.is-animating {
               -webkit-transform: translateX(18px) translateY(32px);
                       transform: translateX(18px) translateY(32px); }
+            section#projects .project-list .project-info .project-pop .pictures.is-active img:hover {
+              z-index: 4; }
           section#projects .project-list .project-info .project-pop .content {
             max-width: 50%;
             opacity: 0;
             transition: opacity 0.3s ease; }
             section#projects .project-list .project-info .project-pop .content.is-active {
               opacity: 1; }
+  section#contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%; }
+    section#contact .contact {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      section#contact .contact img {
+        padding: 0 8px;
+        height: 40px;
+        width: 40px; }

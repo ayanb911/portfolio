@@ -187,6 +187,9 @@ section {
                 &.third.is-animating{
                   transform: translateX(18px) translateY(32px);
                 }
+                &:hover{
+                  z-index: 4;
+                }
               }
             }
           }
@@ -199,6 +202,24 @@ section {
             }
           }
         }
+      }
+    }
+  }
+  &#contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 32px;
+    align-items: center;
+    flex: 0 1 50%;
+    .contact{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      img{
+        padding: 0 8px;
+        height: 40px;
+        width: 40px;
       }
     }
   }
