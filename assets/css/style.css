@@ -39,7 +39,7 @@ header {
           border-bottom-color: #007aff; }
 
 section {
-  margin-bottom: 16px; }
+  margin-bottom: 32px; }
   section#introBanner {
     height: 300px;
     overflow: hidden;
@@ -90,3 +90,52 @@ section {
           color: rgba(0, 0, 0, 0.6); }
           section#introBanner .content .info .location i {
             font-size: 16px; }
+  section#projects {
+    background: url("../images/project-back.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding: 32px; }
+    section#projects .title {
+      font-size: 72px;
+      text-align: right; }
+      section#projects .title:before {
+        content: "";
+        height: 40px;
+        width: 1px;
+        background: #fff;
+        border: 1px solid;
+        margin-right: 16px; }
+    section#projects .project-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 50%;
+              flex: 1 0 50%; }
+      section#projects .project-list .project-name {
+        padding: 0 24px;
+        border-left: 4px solid rgba(255, 255, 255, 0.4); }
+        section#projects .project-list .project-name .project {
+          font-size: 24px;
+          color: #5fbbce;
+          margin: 32px 0;
+          position: relative;
+          transition: all 0.3s ease; }
+          section#projects .project-list .project-name .project:before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -32px;
+            height: 10px;
+            width: 10px;
+            border: 1px solid #86ccda;
+            transition: all 0.3s ease; }
+          section#projects .project-list .project-name .project.is-active, section#projects .project-list .project-name .project:hover {
+            color: #236471; }
+            section#projects .project-list .project-name .project.is-active:before, section#projects .project-list .project-name .project:hover:before {
+              background: #236471; }
