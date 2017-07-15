@@ -39,6 +39,23 @@
     }
   }
 }*/
+
+.row-icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  img{
+    margin: 0 4px;
+    height: 40px;
+    &:first-child{
+      margin-left: 16px;
+    }
+  }
+}
+
 section {
   margin-bottom: 32px;
   &#introBanner {
@@ -146,7 +163,6 @@ section {
     }
     p{
       font-size: 18px;
-      letter-spacing: 1px;
       line-height: 24px;
     }
   }
@@ -176,10 +192,11 @@ section {
       justify-content: space-between;
       flex: 1 0 50%;
       margin: 64px 0;
+      min-height: 650px;
       .project-name {
         padding: 0 24px;
         border-left: 4px solid rgba(255, 255, 255, 0.4);
-        min-width: 25%;
+        width: 25%;
         .project {
           font-size: 24px;
           //color: rgba(255,255,255,0.4);
@@ -261,10 +278,52 @@ section {
             transition: opacity 0.3s ease;
             &.is-active{
               opacity: 1;
-              p{
+              .project-desc{
                 font-size: 20px;
                 letter-spacing: 1px;
                 text-align: justify;
+                a{
+                  font-size: 20px;
+                  padding: 0 4px;
+                  background: #fff;
+                  color: #236471;
+                  margin: 4px;
+                  border-radius: 2px;
+                  &.desc-title{
+                    background: transparent;
+                    margin: 0 0 16px 0;
+                    font-size: 24px;
+                    padding: 0;
+                    text-decoration: underline;
+                    display: block;
+                  }
+                }
+                ul{
+                  padding-left: 16px;
+                  margin-top: 16px;
+                  li{
+                    list-style-type: disc ;
+                    margin: 4px 0;
+                  }
+                }
+              }
+              .desc-tags{
+                display: flex;
+                max-width: 70%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 16px;
+                span{
+                  background: #236471;
+                  padding: 4px;
+                  border-radius: 2px;
+                  color: #fff;
+                  margin: 0 4px;
+                  font-size: 16px;
+                  &:first-child{
+                    margin-left: 0;
+                  }
+                }
               }
             }
           }
@@ -292,7 +351,7 @@ section {
   }
 }
 
-  @media screen and (max-width: 767px){
+@media screen and (max-width: 767px){
     .desktop-only{
       display: none !important;
     }
@@ -441,7 +500,6 @@ section {
         background: #236471;
         font-size: 14px;
         padding: 6px;
-        //border:1px solid #236471;
         border-radius: 4px;
       }
     }
