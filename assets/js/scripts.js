@@ -1,13 +1,10 @@
 $(document).ready(function () {
-    fixedHeader();
     projectListScroll();
-    $(window).scroll(function () {
-        fixedHeader();
-    })
+    siteMade();
 })
 
 
-function fixedHeader(){
+/*function fixedHeader(){
     var scroll = $(window).scrollTop(),
         menu = $("#menu");
     //console.log(scroll);
@@ -17,7 +14,7 @@ function fixedHeader(){
     else{
         menu.removeClass("center-shadow");
     }
-}
+}*/
 
 function projectListScroll() {
     var projectList = $(".project");
@@ -45,7 +42,27 @@ function projectListScroll() {
     )
 }
 
+function siteMade(){
+    var hoverHtml = '<div class="row-icons">'+
+'<img src="assets/images/coding%20icons/html5.png" title="Photoshop">'+
+        '<img src="assets/images/coding%20icons/sass.svg" title="PHP" class="php">'+
+        '<img src="assets/images/coding%20icons/jquery.gif" title="Drupal" class="drupal">'+
+        '<img src="assets/images/coding%20icons/git.png" title="Drupal" class="drupal">'+
+        '<img src="assets/images/coding%20icons/gulp.png" title="Drupal" class="drupal">'+
+        '</div>';
+    var link = $("#contact>.info");
 
+    console.log(hoverHtml);
+
+    link.hover(function () {
+        link.html(hoverHtml);
+        console.log(1);
+    },
+    function () {
+        link.html('<p>How was this site made?</p>');
+        console.log(2);
+    })
+}
 
 /*function projectScroll(){
     var id = "#" + $(this).attr("data-info");
