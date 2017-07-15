@@ -1,46 +1,44 @@
 .hidden {
   display: none !important; }
 
-header {
+/*header{
   width: 100%;
-  position: fixed;
-  z-index: 999;
-  padding: 0 32px; }
-  header nav#menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  padding: 0 32px;
+  nav#menu{
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     background: transparent;
-    transition: all 0.3s ease; }
-    header nav#menu div.menu-items {
+    transition: all 0.3s ease;
+    div.menu-items{
       padding: 0 16px;
       min-width: 70px;
       text-align: center;
       font-size: 16px;
       text-transform: capitalize;
       color: #fff;
-      border-bottom: 2px solid transparent; }
-      header nav#menu div.menu-items p {
-        margin: 16px 0; }
-      header nav#menu div.menu-items:hover {
+      border-bottom: 2px solid transparent;
+      p{
+        margin:16px 0;
+      }
+      &:hover{
         border-bottom-color: #fff;
-        cursor: pointer; }
-    header nav#menu.center-shadow {
+        cursor: pointer;
+      }
+    }
+    &.center-shadow{
       margin: 0 -32px;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      justify-content: center;
       box-shadow: 0 0 2px 0 #b1b1b1;
-      background: #fff; }
-      header nav#menu.center-shadow div.menu-items {
-        color: #007aff; }
-        header nav#menu.center-shadow div.menu-items:hover {
-          border-bottom-color: #007aff; }
-
+      background: #fff;
+      div.menu-items{
+        color:#007aff;
+        &:hover{
+          border-bottom-color: #007aff;
+        }
+      }
+    }
+  }
+}*/
 section {
   margin-bottom: 32px; }
   section#introBanner {
@@ -54,6 +52,22 @@ section {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center; }
+    section#introBanner .header-button {
+      position: absolute;
+      top: 24px;
+      left: 36px;
+      z-index: 999; }
+      section#introBanner .header-button a {
+        min-width: 70px;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        padding: 8px; }
+        section#introBanner .header-button a:hover {
+          background: #fff;
+          color: #236471; }
     section#introBanner .content {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -84,7 +98,8 @@ section {
           color: #fff; }
         section#introBanner .content .info .profession {
           font-size: 32px;
-          margin-top: 8px; }
+          margin: 8px 0;
+          color: #236471; }
         section#introBanner .content .info .location {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -93,6 +108,23 @@ section {
           color: rgba(0, 0, 0, 0.6); }
           section#introBanner .content .info .location i {
             font-size: 16px; }
+  section#about {
+    padding: 32px; }
+    section#about .title {
+      font-size: 72px;
+      text-align: left;
+      margin-bottom: 32px; }
+      section#about .title:before {
+        content: "";
+        height: 40px;
+        width: 1px;
+        background: #fff;
+        border: 1px solid #86ccda;
+        margin-right: 16px; }
+    section#about p {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 24px; }
   section#projects {
     background: url("../images/project-back.jpeg");
     background-repeat: no-repeat;
@@ -225,3 +257,98 @@ section {
         padding: 0 8px;
         height: 40px;
         width: 40px; }
+
+@media screen and (max-width: 1024px) {
+  .pictures img {
+    height: 100px;
+    width: 50px; }
+  section#introBanner {
+    height: 260px;
+    overflow: visible; }
+    section#introBanner .header-button {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: -38px;
+      top: auto;
+      left: auto; }
+      section#introBanner .header-button a {
+        margin: 0 auto;
+        color: #fff;
+        background: #236471;
+        font-size: 14px;
+        padding: 6px;
+        border-radius: 4px; }
+    section#introBanner .content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding-top: 26px; }
+      section#introBanner .content .info {
+        text-align: center; }
+        section#introBanner .content .info h1.name {
+          font-size: 28px; }
+        section#introBanner .content .info h1.profession {
+          font-size: 16px;
+          color: #fff;
+          font-weight: 100; }
+        section#introBanner .content .info span {
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
+      section#introBanner .content .avatar {
+        text-align: center;
+        margin: 0;
+        position: relative;
+        top: 46px; }
+        section#introBanner .content .avatar img {
+          height: 100px; }
+  section#about .title {
+    font-size: 42px; }
+  section#projects .title {
+    font-size: 42px;
+    text-align: left; }
+  section#projects .project-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    section#projects .project-list .project-name .project {
+      color: rgba(255, 255, 255, 0.5); }
+      section#projects .project-list .project-name .project.is-active {
+        color: #fff; }
+    section#projects .project-list .project-info {
+      max-width: 100%;
+      margin-top: 28px; }
+      section#projects .project-list .project-info .project-pop {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        section#projects .project-list .project-info .project-pop .pictures.is-active {
+          margin-bottom: 16px; }
+          section#projects .project-list .project-info .project-pop .pictures.is-active img {
+            display: none; }
+            section#projects .project-list .project-info .project-pop .pictures.is-active img.first {
+              display: block !important;
+              position: relative;
+              width: 100%;
+              left: 0;
+              top: 0;
+              height: 150px; }
+              section#projects .project-list .project-info .project-pop .pictures.is-active img.first.is-animating {
+                -webkit-transform: translateX(0);
+                        transform: translateX(0); }
+        section#projects .project-list .project-info .project-pop .content {
+          max-width: 100%; }
+          section#projects .project-list .project-info .project-pop .content p {
+            font-size: 18px;
+            text-shadow: 0 1px 2px #163b42; }
+  section#contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    section#contact div {
+      margin: 8px 0; } }
