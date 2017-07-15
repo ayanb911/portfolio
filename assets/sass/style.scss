@@ -264,7 +264,7 @@ section {
   }
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 768px){
   .pictures{
     img{
       height: 100px;
@@ -379,6 +379,59 @@ section {
       flex-direction: column;
       div{
         margin: 8px 0;
+      }
+    }
+  }
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+  section{
+    &#projects{
+      .title{
+        font-size: 42px;
+        text-align: right;
+      }
+      .project-list{
+        flex-direction: row;
+        .project-name{
+          min-width: 36%;
+          .project{
+            color: rgba(255,255,255, 0.5);
+            &.is-active{
+              color: #fff;
+            }
+          }
+        }
+        .project-info {
+          max-width: 100%;
+          margin-top: 28px;
+          .project-pop {
+            flex-direction: column;
+            .pictures.is-active {
+              margin-bottom: 16px;
+              img{
+                display: none;
+                &.first{
+                  display: block !important;
+                  position: relative;
+                  width: 100%;
+                  left:0;
+                  top: 0;
+                  height: 150px;
+                  &.is-animating{
+                    transform: translateX(0);
+                  }
+                }
+              }
+            }
+            .content{
+              max-width: 100%;
+              p{
+                font-size: 18px;
+                text-shadow: 0 1px 2px rgb(22, 59, 66);
+              }
+            }
+          }
+        }
       }
     }
   }

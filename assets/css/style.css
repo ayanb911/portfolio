@@ -258,7 +258,7 @@ section {
         height: 40px;
         width: 40px; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .pictures img {
     height: 100px;
     width: 50px; }
@@ -352,3 +352,46 @@ section {
             flex-direction: column; }
     section#contact div {
       margin: 8px 0; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  section#projects .title {
+    font-size: 42px;
+    text-align: right; }
+  section#projects .project-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    section#projects .project-list .project-name {
+      min-width: 36%; }
+      section#projects .project-list .project-name .project {
+        color: rgba(255, 255, 255, 0.5); }
+        section#projects .project-list .project-name .project.is-active {
+          color: #fff; }
+    section#projects .project-list .project-info {
+      max-width: 100%;
+      margin-top: 28px; }
+      section#projects .project-list .project-info .project-pop {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        section#projects .project-list .project-info .project-pop .pictures.is-active {
+          margin-bottom: 16px; }
+          section#projects .project-list .project-info .project-pop .pictures.is-active img {
+            display: none; }
+            section#projects .project-list .project-info .project-pop .pictures.is-active img.first {
+              display: block !important;
+              position: relative;
+              width: 100%;
+              left: 0;
+              top: 0;
+              height: 150px; }
+              section#projects .project-list .project-info .project-pop .pictures.is-active img.first.is-animating {
+                -webkit-transform: translateX(0);
+                        transform: translateX(0); }
+        section#projects .project-list .project-info .project-pop .content {
+          max-width: 100%; }
+          section#projects .project-list .project-info .project-pop .content p {
+            font-size: 18px;
+            text-shadow: 0 1px 2px #163b42; } }
