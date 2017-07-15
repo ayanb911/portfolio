@@ -193,15 +193,21 @@ section {
         max-width: 75%;
         .project-pop{
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           justify-content: space-between;
+          align-items: center;
           .pictures{
             position: relative;
-            width: 100%;
+            width: 74%;
+            height: 386px;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 32px;
             img{
               position: absolute;
               top: 0;
               left: 0;
+              height: 350px;
               border:1px solid white;
               transition: all 0.3s ease;
               transform: translate(0,0);
@@ -233,11 +239,16 @@ section {
             }
           }
           .content{
-            max-width: 50%;
+            max-width: 90%;
             opacity: 0;
             transition: opacity 0.3s ease;
             &.is-active{
               opacity: 1;
+              p{
+                font-size: 20px;
+                letter-spacing: 1px;
+                text-align: justify;
+              }
             }
           }
         }
@@ -264,7 +275,7 @@ section {
   }
 }
 
-@media screen and (max-width: 768px){
+  @media screen and (max-width: 768px){
   .pictures{
     img{
       height: 100px;

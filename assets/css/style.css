@@ -183,20 +183,28 @@ section {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          -webkit-box-orient: horizontal;
+          -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-                  flex-direction: row;
+              -ms-flex-direction: column;
+                  flex-direction: column;
           -webkit-box-pack: justify;
               -ms-flex-pack: justify;
-                  justify-content: space-between; }
+                  justify-content: space-between;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
           section#projects .project-list .project-info .project-pop .pictures {
             position: relative;
-            width: 100%; }
+            width: 74%;
+            height: 386px;
+            text-align: center;
+            margin: auto;
+            margin-bottom: 32px; }
             section#projects .project-list .project-info .project-pop .pictures img {
               position: absolute;
               top: 0;
               left: 0;
+              height: 350px;
               border: 1px solid white;
               transition: all 0.3s ease;
               -webkit-transform: translate(0, 0);
@@ -219,11 +227,15 @@ section {
             section#projects .project-list .project-info .project-pop .pictures.is-active img:hover {
               z-index: 4; }
           section#projects .project-list .project-info .project-pop .content {
-            max-width: 50%;
+            max-width: 90%;
             opacity: 0;
             transition: opacity 0.3s ease; }
             section#projects .project-list .project-info .project-pop .content.is-active {
               opacity: 1; }
+              section#projects .project-list .project-info .project-pop .content.is-active p {
+                font-size: 20px;
+                letter-spacing: 1px;
+                text-align: justify; }
   section#contact {
     display: -webkit-box;
     display: -ms-flexbox;
