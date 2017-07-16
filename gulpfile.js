@@ -57,7 +57,7 @@ gulp.task('uglify-css-main', function(){
 
 //minify images
 gulp.task('minify-image', function () {
-    return gulp.src("assets/images/**/*.+(png|jpg|gif|svg|jpeg)")
+    return gulp.src("assets/images/**/*.+(png|jpg|gif|svg|jpeg|ico)")
         .pipe(imagemin())
         .pipe(rename({suffix: ".min"}))
         .pipe(gulp.dest("production/images"))
