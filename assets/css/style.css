@@ -480,6 +480,8 @@ section {
           section#projects .project-list .project-info .project-pop .content p {
             font-size: 18px;
             text-shadow: 0 1px 2px #163b42; }
+          section#projects .project-list .project-info .project-pop .content.is-active .desc-tags {
+            max-width: 100%; }
   section#contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
