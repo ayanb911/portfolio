@@ -452,6 +452,10 @@ section {
       }
     }
     &#projects{
+      background: url("../../production/images/project-back-mobile.min.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
       margin-bottom: 0;
       .title{
         font-size: 42px;
