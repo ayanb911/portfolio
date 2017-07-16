@@ -297,6 +297,17 @@ section {
                     text-decoration: underline;
                     display: block;
                   }
+                  &.has-i{
+                    background:transparent;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    i{
+                      font-size: 16px;
+                      position: relative;
+                      top: 2px;
+                    }
+                  }
                 }
                 ul{
                   padding-left: 16px;
@@ -304,6 +315,7 @@ section {
                   li{
                     list-style-type: disc ;
                     margin: 4px 0;
+                    text-align: left;
                   }
                 }
               }
@@ -452,7 +464,7 @@ section {
       }
     }
     &#projects{
-      background: url("../../production/images/project-back-mobile.min.jpeg");
+      background: url("../../production/images/project-back-mobile.min.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
