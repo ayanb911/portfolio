@@ -196,7 +196,7 @@ section {
       .project-name {
         padding: 0 24px;
         border-left: 4px solid rgba(255, 255, 255, 0.4);
-        width: 25%;
+        min-width: 25%;
         .project {
           font-size: 24px;
           //color: rgba(255,255,255,0.4);
@@ -360,15 +360,39 @@ section {
 }
 
 @media screen and (max-width: 767px){
-    .desktop-only{
-      display: none !important;
-    }
+  .desktop-only{
+    display: none !important;
+  }
+
   .pictures{
     img{
       height: 100px;
       width: 50px;
     }
   }
+
+  .row-icons{
+    flex-direction: column;
+    align-items: center;
+    span.icon-text{
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    div.icon-img{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-height: 110px;
+      img{
+        &:first-child{
+          margin-right: 4px;
+        }
+        padding: 0;
+      }
+    }
+  }
+
   section{
     &#introBanner{
       height: 260px;
@@ -421,6 +445,8 @@ section {
       }
     }
     &#about{
+      margin-bottom: 0;
+      padding-bottom: 0;
       .title{
         font-size: 42px;
       }
@@ -449,23 +475,23 @@ section {
               height: 100%;
               margin-bottom: 32px;
               width: 100%;
-            &.is-active {
-              margin-bottom: 16px;
-              img{
-                display: none;
-                &.first{
-                  display: block !important;
-                  position: relative;
-                  width: 100%;
-                  left:0;
-                  top: 0;
-                  height: 44vw;
-                  &.is-animating{
-                    transform: translateX(0);
+              &.is-active {
+                margin-bottom: 16px;
+                img{
+                  display: none;
+                  &.first{
+                    display: block !important;
+                    position: relative;
+                    width: 100%;
+                    left:0;
+                    top: 0;
+                    height: 44vw;
+                    &.is-animating{
+                      transform: translateX(0);
+                    }
                   }
                 }
               }
-            }
             }
             .content{
               max-width: 100%;
@@ -483,6 +509,12 @@ section {
       div{
         margin: 8px 0;
       }
+      .row-icons{
+        flex-direction: row;
+        img{
+          height: 40px;
+        }
+      }
     }
   }
 }
@@ -491,62 +523,76 @@ section {
   .desktop-only{
     display: none !important;
   }
-  section{
-  &#introBanner{
-    height: 260px;
-    overflow: visible;
-    .header-button{
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      bottom: -38px;
-      top: auto;
-      left: auto;
-      a{
-        margin: 0 auto;
-        color: #fff;
-        background: #236471;
-        font-size: 14px;
-        padding: 6px;
-        border-radius: 4px;
-      }
+
+  .row-icons{
+    flex-direction: column;
+    align-items: baseline;
+    span.icon-text{
+      margin-bottom: 8px;
     }
-    .content{
-      flex-direction: column;
-      padding-top: 26px;
-      .info{
-        text-align: center;
-        h1{
-          &.name{
-            font-size: 28px;
-          }
-          &.profession{
-            font-size: 16px;
-            color: #fff;
-            font-weight: 100;
-          }
-        }
-        span{
-          justify-content: center;
-        }
-      }
-      .avatar{
-        text-align: center;
+    img{
+      &:first-child{
         margin: 0;
-        position: relative;
-        top: 46px;
-        img{
-          height: 100px;
-        }
       }
     }
   }
-  &#about{
-    .title{
-      font-size: 42px;
+
+  section{
+    &#introBanner{
+      height: 260px;
+      overflow: visible;
+      .header-button{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: -38px;
+        top: auto;
+        left: auto;
+        a{
+          margin: 0 auto;
+          color: #fff;
+          background: #236471;
+          font-size: 14px;
+          padding: 6px;
+          border-radius: 4px;
+        }
+      }
+      .content{
+        flex-direction: column;
+        padding-top: 26px;
+        .info{
+          text-align: center;
+          h1{
+            &.name{
+              font-size: 28px;
+            }
+            &.profession{
+              font-size: 16px;
+              color: #fff;
+              font-weight: 100;
+            }
+          }
+          span{
+            justify-content: center;
+          }
+        }
+        .avatar{
+          text-align: center;
+          margin: 0;
+          position: relative;
+          top: 46px;
+          img{
+            height: 100px;
+          }
+        }
+      }
+    }
+    &#about{
+      .title{
+        font-size: 42px;
+      }
     }
   }
-}
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
@@ -579,23 +625,23 @@ section {
               height: 100%;
               margin-bottom: 32px;
               width: 100%;
-            &.is-active {
-              margin-bottom: 16px;
-              img{
-                display: none;
-                &.first{
-                  display: block !important;
-                  position: relative;
-                  width: 100%;
-                  left:0;
-                  top: 0;
-                  height: 32vw;
-                  &.is-animating{
-                    transform: translateX(0);
+              &.is-active {
+                margin-bottom: 16px;
+                img{
+                  display: none;
+                  &.first{
+                    display: block !important;
+                    position: relative;
+                    width: 100%;
+                    left:0;
+                    top: 0;
+                    height: 32vw;
+                    &.is-animating{
+                      transform: translateX(0);
+                    }
                   }
                 }
               }
-            }
             }
             .content{
               max-width: 100%;

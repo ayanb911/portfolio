@@ -196,7 +196,7 @@ section {
       section#projects .project-list .project-name {
         padding: 0 24px;
         border-left: 4px solid rgba(255, 255, 255, 0.4);
-        width: 25%; }
+        min-width: 25%; }
         section#projects .project-list .project-name .project {
           font-size: 24px;
           color: #5fbbce;
@@ -361,6 +361,35 @@ section {
   .pictures img {
     height: 100px;
     width: 50px; }
+  .row-icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .row-icons span.icon-text {
+      margin-bottom: 8px;
+      text-align: center; }
+    .row-icons div.icon-img {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      min-height: 110px; }
+      .row-icons div.icon-img img {
+        padding: 0; }
+        .row-icons div.icon-img img:first-child {
+          margin-right: 4px; }
   section#introBanner {
     height: 260px;
     overflow: visible; }
@@ -403,8 +432,11 @@ section {
         top: 46px; }
         section#introBanner .content .avatar img {
           height: 100px; }
-  section#about .title {
-    font-size: 42px; }
+  section#about {
+    margin-bottom: 0;
+    padding-bottom: 0; }
+    section#about .title {
+      font-size: 42px; }
   section#projects .title {
     font-size: 42px;
     text-align: left; }
@@ -454,11 +486,30 @@ section {
         -ms-flex-direction: column;
             flex-direction: column; }
     section#contact div {
-      margin: 8px 0; } }
+      margin: 8px 0; }
+    section#contact .row-icons {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      section#contact .row-icons img {
+        height: 40px; } }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .desktop-only {
     display: none !important; }
+  .row-icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
+    .row-icons span.icon-text {
+      margin-bottom: 8px; }
+    .row-icons img:first-child {
+      margin: 0; }
   section#introBanner {
     height: 260px;
     overflow: visible; }
