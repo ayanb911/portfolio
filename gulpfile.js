@@ -57,7 +57,7 @@ gulp.task('uglify-css-main', function(){
 
 //minify images
 gulp.task('minify-image', function () {
-    return gulp.src("assets/images/**/*.+(png|jpg|gif|svg)")
+    return gulp.src("assets/images/**/*.+(png|jpg|gif|svg|jpeg)")
         .pipe(imagemin())
         .pipe(rename({suffix: ".min"}))
         .pipe(gulp.dest("production/images"))
@@ -67,7 +67,7 @@ gulp.task('minify-image', function () {
 gulp.task('default', ['build-css']);
 
 // uglify stuff
-gulp.task("uglify", ['build-css','uglify-js', 'uglify-css-reset', 'uglify-css-main', 'minify-image']);
+gulp.task("uglify", ['build-css','uglify-js', 'uglify-css-reset', 'uglify-css-main']);
 
 
 //gulp watch

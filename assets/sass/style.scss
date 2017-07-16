@@ -65,7 +65,7 @@ section {
     .background {
       width: 100%;
       min-height: 190px;
-      background: url("../images/banner-back.jpg");
+      background: url("../../production/images/banner-back.min.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -168,7 +168,7 @@ section {
   }
   &#projects {
     //background: #0F6C7D;
-    background: url("../images/project-back.jpeg");
+    background: url("../../production/images/project-back.min.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -373,20 +373,20 @@ section {
 
   .row-icons{
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     span.icon-text{
       margin-bottom: 8px;
-      text-align: center;
+      text-align: left;
     }
     div.icon-img{
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: baseline;
       min-height: 110px;
       img{
         &:first-child{
-          margin-right: 4px;
+          margin-left:0;
         }
         padding: 0;
       }
@@ -452,6 +452,7 @@ section {
       }
     }
     &#projects{
+      margin-bottom: 0;
       .title{
         font-size: 42px;
         text-align: left;
@@ -511,14 +512,10 @@ section {
     }
     &#contact{
       flex-direction: column;
-      div{
-        margin: 8px 0;
-      }
+      margin: 0;
+      padding: 10px;
       .row-icons{
-        flex-direction: row;
-        img{
-          height: 40px;
-        }
+        display: none;
       }
     }
   }

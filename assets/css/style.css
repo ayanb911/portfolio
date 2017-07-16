@@ -68,7 +68,7 @@ section {
     section#introBanner .background {
       width: 100%;
       min-height: 190px;
-      background: url("../images/banner-back.jpg");
+      background: url("../../production/images/banner-back.min.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center; }
@@ -164,7 +164,7 @@ section {
       font-size: 18px;
       line-height: 24px; }
   section#projects {
-    background: url("../images/project-back.jpeg");
+    background: url("../../production/images/project-back.min.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -366,12 +366,12 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
     .row-icons span.icon-text {
       margin-bottom: 8px;
-      text-align: center; }
+      text-align: left; }
     .row-icons div.icon-img {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -382,14 +382,14 @@ section {
               flex-direction: row;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
+      -webkit-box-pack: baseline;
+          -ms-flex-pack: baseline;
+              justify-content: baseline;
       min-height: 110px; }
       .row-icons div.icon-img img {
         padding: 0; }
         .row-icons div.icon-img img:first-child {
-          margin-right: 4px; }
+          margin-left: 0; }
   section#introBanner {
     height: 260px;
     overflow: visible; }
@@ -437,65 +437,62 @@ section {
     padding-bottom: 0; }
     section#about .title {
       font-size: 42px; }
-  section#projects .title {
-    font-size: 42px;
-    text-align: left; }
-  section#projects .project-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    section#projects .project-list .project-name .project {
-      color: rgba(255, 255, 255, 0.5); }
-      section#projects .project-list .project-name .project.is-active {
-        color: #fff; }
-    section#projects .project-list .project-info {
-      max-width: 100%;
-      margin-top: 28px; }
-      section#projects .project-list .project-info .project-pop {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column; }
-        section#projects .project-list .project-info .project-pop .pictures {
-          height: 100%;
-          margin-bottom: 32px;
-          width: 100%; }
-          section#projects .project-list .project-info .project-pop .pictures.is-active {
-            margin-bottom: 16px; }
-            section#projects .project-list .project-info .project-pop .pictures.is-active img {
-              display: none; }
-              section#projects .project-list .project-info .project-pop .pictures.is-active img.first {
-                display: block !important;
-                position: relative;
-                width: 100%;
-                left: 0;
-                top: 0;
-                height: 44vw; }
-                section#projects .project-list .project-info .project-pop .pictures.is-active img.first.is-animating {
-                  -webkit-transform: translateX(0);
-                          transform: translateX(0); }
-        section#projects .project-list .project-info .project-pop .content {
-          max-width: 100%; }
-          section#projects .project-list .project-info .project-pop .content p {
-            font-size: 18px;
-            text-shadow: 0 1px 2px #163b42; }
-          section#projects .project-list .project-info .project-pop .content.is-active .desc-tags {
+  section#projects {
+    margin-bottom: 0; }
+    section#projects .title {
+      font-size: 42px;
+      text-align: left; }
+    section#projects .project-list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      section#projects .project-list .project-name .project {
+        color: rgba(255, 255, 255, 0.5); }
+        section#projects .project-list .project-name .project.is-active {
+          color: #fff; }
+      section#projects .project-list .project-info {
+        max-width: 100%;
+        margin-top: 28px; }
+        section#projects .project-list .project-info .project-pop {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          section#projects .project-list .project-info .project-pop .pictures {
+            height: 100%;
+            margin-bottom: 32px;
+            width: 100%; }
+            section#projects .project-list .project-info .project-pop .pictures.is-active {
+              margin-bottom: 16px; }
+              section#projects .project-list .project-info .project-pop .pictures.is-active img {
+                display: none; }
+                section#projects .project-list .project-info .project-pop .pictures.is-active img.first {
+                  display: block !important;
+                  position: relative;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  height: 44vw; }
+                  section#projects .project-list .project-info .project-pop .pictures.is-active img.first.is-animating {
+                    -webkit-transform: translateX(0);
+                            transform: translateX(0); }
+          section#projects .project-list .project-info .project-pop .content {
             max-width: 100%; }
+            section#projects .project-list .project-info .project-pop .content p {
+              font-size: 18px;
+              text-shadow: 0 1px 2px #163b42; }
+            section#projects .project-list .project-info .project-pop .content.is-active .desc-tags {
+              max-width: 100%; }
   section#contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
-    section#contact div {
-      margin: 8px 0; }
+            flex-direction: column;
+    margin: 0;
+    padding: 10px; }
     section#contact .row-icons {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; }
-      section#contact .row-icons img {
-        height: 40px; } }
+      display: none; } }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .desktop-only {
