@@ -352,6 +352,8 @@ section {
         width: 40px; }
     section#contact .info .row-icons {
       margin: 0; }
+      section#contact .info .row-icons img {
+        height: 30px; }
 
 @media screen and (max-width: 767px) {
   .desktop-only {
