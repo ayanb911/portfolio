@@ -67,7 +67,7 @@ gulp.task('minify-image', function () {
 gulp.task('default', ['build-css']);
 
 // uglify stuff
-gulp.task("uglify", ['build-css','uglify-js', 'uglify-css-reset', 'uglify-css-main']);
+gulp.task("uglify", ['build-css','uglify-js', 'uglify-css-reset', 'uglify-css-main', 'minify-image']);
 
 
 //gulp watch
