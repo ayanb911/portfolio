@@ -1,10 +1,10 @@
 $(document).ready(function () {
   //fixedHeader();
   $(".owl-carousel").owlCarousel({
-    //loop:true,
+    loop:true,
     items: 1,
-    //autoplay:1000,
-    //autoplaySpeed: 1000
+    autoplay:1000,
+    autoplaySpeed: 1000
   });
 })
 
