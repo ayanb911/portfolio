@@ -170,6 +170,68 @@ header {
         font-size: 32px;
         border-bottom: 1px dashed #616161; }
 
+#socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 48px;
+  margin: 42px 0;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 152px; }
+  #socialLinks p.social-divider {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-style: italic; }
+  #socialLinks > a {
+    height: 250px;
+    width: 35%;
+    border-radius: 4px;
+    overflow: hidden; }
+    #socialLinks > a .social-wrapper {
+      height: 100%;
+      position: relative; }
+      #socialLinks > a .social-wrapper img {
+        position: absolute;
+        opacity: 0.3; }
+      #socialLinks > a .social-wrapper .social-content {
+        line-height: 250px;
+        color: #fff;
+        text-align: center;
+        font-size: 32px; }
+    #socialLinks > a#social-codepen {
+      border: 1px solid #111; }
+      #socialLinks > a#social-codepen .social-wrapper {
+        background: #000; }
+        #socialLinks > a#social-codepen .social-wrapper img {
+          height: 94%;
+          top: 8px; }
+      #socialLinks > a#social-codepen .social-content {
+        padding-left: 34px; }
+    #socialLinks > a#social-github {
+      border: 1px solid #e1e1e1; }
+      #socialLinks > a#social-github .social-wrapper {
+        background: #e1e1e1; }
+        #socialLinks > a#social-github .social-wrapper img {
+          height: 94%;
+          top: 8px;
+          right: 4px;
+          opacity: 0.1; }
+      #socialLinks > a#social-github .social-content {
+        padding-right: 34px;
+        color: #000; }
+    #socialLinks > a:hover img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+
 @-webkit-keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); }

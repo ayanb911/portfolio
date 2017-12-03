@@ -162,6 +162,76 @@ header{
   }
 }
 
+#socialLinks{
+  display: flex;
+  flex-direction: row;
+  padding: 0 48px;
+  margin: 42px 0;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 152px;
+  p.social-divider{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  &>a{
+    height: 250px;
+    width: 35%;
+    border-radius: 4px;
+    overflow: hidden;
+    .social-wrapper{
+      height: 100%;
+      position: relative;
+      img{
+        position: absolute;
+        opacity: 0.3;
+      }
+      .social-content{
+        line-height: 250px;
+        color: #fff;
+        text-align: center;
+        font-size: 32px;
+      }
+    }
+    &#social-codepen{
+      border: 1px solid #111;
+      .social-wrapper{
+        background: #000;
+        img{
+          height: 94%;
+          top: 8px;
+        }
+      }
+      .social-content{
+        padding-left: 34px;
+      }
+    }
+    &#social-github{
+      border: 1px solid #e1e1e1;
+      .social-wrapper{
+        background: #e1e1e1;
+        img{
+          height: 94%;
+          top: 8px;
+          right:4px;
+          opacity: 0.1;
+        }
+      }
+      .social-content{
+        padding-right: 34px;
+        color: #000;
+      }
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
 //animations
 @keyframes pulse {
   0% {
