@@ -251,6 +251,45 @@ header {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
 
+#projectList {
+  margin: 42px 0px;
+  padding: 0 48px;
+  width: 100%; }
+  #projectList .sectionTitle {
+    font-size: 32px;
+    margin-bottom: 28px; }
+    #projectList .sectionTitle h2 {
+      font-weight: 400; }
+  #projectList #projectGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    #projectList #projectGrid > div {
+      max-width: 31.3333%;
+      width: 100%;
+      margin-bottom: 28px; }
+      #projectList #projectGrid > div.project {
+        border: 1px solid #e1e1e1;
+        background: #fff; }
+        #projectList #projectGrid > div.project:last-child {
+          margin-right: 0; }
+        #projectList #projectGrid > div.project > div.project-image {
+          background: url("../images/Project Images/codepen - theme switcher/Screen Shot 2017-07-15 at 12.18.50 PM.png");
+          height: 150px;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center; }
+
 @-webkit-keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4); }

@@ -253,6 +253,50 @@ header{
   }
 }
 
+#projectList{
+  margin: 42px 0px;
+  padding: 0 48px;
+  width: 100%;
+  .sectionTitle{
+    font-size: 32px;
+    margin-bottom: 28px;
+    h2{
+      font-weight: 400;
+    }
+  }
+  #projectGrid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &>div{
+      max-width: 31.3333%;
+      width: 100%;
+      margin-bottom: 28px;
+      &.project{
+        border: 1px solid #e1e1e1;
+        background: #fff;
+        &:last-child{
+          margin-right:0;
+        }
+        &>div{
+          &.project-image{
+            background: url("../images/Project Images/codepen - theme switcher/Screen Shot 2017-07-15 at 12.18.50 PM.png");
+            height: 150px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+          }
+          &.project-title{
+
+          }
+        }
+      }
+    }
+  }
+}
+
 //animations
 @keyframes pulse {
   0% {
