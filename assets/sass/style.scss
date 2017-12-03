@@ -15,6 +15,7 @@ header{
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 999;
   .header-wrapper{
     padding: 16px 32px;
     display: flex;
@@ -52,7 +53,6 @@ header{
     }
   }
 }
-
 #projectBanner{
   .project-banner{
     padding: 16px 48px;
@@ -93,6 +93,7 @@ header{
               transform: translate(-50%, -50%);
             }
             &:hover{
+              color: #000;
               &:after{
                 right: -8px;
               }
@@ -112,5 +113,64 @@ header{
         }
       }
     }
+  }
+}
+.goDown{
+  margin: 42px 0px;
+  padding: 0 48px;
+  text-align: center;
+  width: 100%;
+  .animation-wrapper{
+    box-shadow: 0 0 0 rgba(0,0,0, 0.4);
+    animation: pulse 2s infinite;
+    width: max-content;
+    border-radius: 3em;
+    margin: 0 auto;
+    i{
+      font-size: 92px;
+      font-weight: 100;
+      position: relative;
+      top: 4px;
+      padding: 0 2px;
+      cursor: pointer;
+    }
+  }
+}
+
+#introSection{
+  margin: 42px 0px;
+  padding: 0 48px;
+  text-align: center;
+  width: 100%;
+  .intro-title{
+    font-size: 92px;
+    font-weight: 100;
+  }
+  .intro-desc{
+    text-align: center;
+    h4{
+      margin: 16px 0;
+      line-height: 1.5;
+      font-weight: 100;
+      font-size: 32px;
+      a{
+        font-weight: 100;
+        font-size: 32px;
+        border-bottom: 1px dashed #616161;
+      }
+    }
+  }
+}
+
+//animations
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0,0,0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0,0,0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0,0,0, 0);
   }
 }
