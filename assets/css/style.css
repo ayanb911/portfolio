@@ -168,7 +168,26 @@ header {
       #introSection .intro-desc h4 a {
         font-weight: 100;
         font-size: 32px;
-        border-bottom: 1px dashed #616161; }
+        border-bottom: 1px dashed #616161;
+        position: relative; }
+        #introSection .intro-desc h4 a:after {
+          content: "";
+          position: absolute;
+          top: 60px;
+          left: 38%;
+          width: 100%;
+          background: url(../images/arrow.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          -webkit-animation: none;
+                  animation: none;
+          opacity: 0;
+          height: 0; }
+        #introSection .intro-desc h4 a:hover:after {
+          height: 200px;
+          -webkit-animation: flash 0.5s infinite;
+                  animation: flash 0.5s infinite; }
 
 #socialLinks {
   display: -webkit-box;
@@ -247,3 +266,15 @@ header {
     box-shadow: 0 0 0 10px transparent; }
   100% {
     box-shadow: 0 0 0 0 transparent; } }
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes flash {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
