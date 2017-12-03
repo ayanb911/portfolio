@@ -1,5 +1,11 @@
+body {
+  padding-top: 91px; }
+  body a {
+    color: #000; }
+    body a:hover {
+      color: #575757; }
+
 .container {
-  padding: 0 32px;
   margin: 0 16px; }
 
 header {
@@ -9,7 +15,6 @@ header {
   top: 0; }
   header .header-wrapper {
     padding: 16px 32px;
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -56,6 +61,32 @@ header {
               align-items: center; }
       header .header-wrapper .menu-wrapper.header-menu > a {
         height: 100%;
-        text-transform: uppercase;
-        color: #000;
-        font-weight: 400; }
+        text-transform: uppercase; }
+        header .header-wrapper .menu-wrapper.header-menu > a:first-child {
+          margin-right: 12px; }
+
+#projectBanner .project-banner {
+  padding: 16px 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  padding-right: 0; }
+  #projectBanner .project-banner .banner-left {
+    max-width: 40%;
+    width: 100%; }
+    #projectBanner .project-banner .banner-left .banner-title {
+      font-size: 42px; }
+  #projectBanner .project-banner .banner-right {
+    position: relative;
+    right: -20%; }
+    #projectBanner .project-banner .banner-right .banner-image img {
+      height: 100%;
+      width: 100%;
+      box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.2); }
